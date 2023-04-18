@@ -12,7 +12,7 @@ namespace NLayer.Core.Repositories
 		Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
 		Task AddAsync(T entity);
 		Task AddRangeAsync(IEnumerable<T> entities);
-		void Upgrade(T entity);
+		void Update(T entity);
 		void Remove(T entity);
 		void RemoveRange(IEnumerable<T> entities);
 
