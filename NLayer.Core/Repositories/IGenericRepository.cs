@@ -4,7 +4,7 @@ namespace NLayer.Core.Repositories
 {
 	public interface IGenericRepository<T> where T : class
 	{
-		//IQueryable'da veritabanına sprgu atmaz ne zamanki ToList(); deriz o zaman db'ye sorguyu atar. Dolayısıyla listeleyip vs sonra veritabanına atabiliriz.Daha hızlı olur.
+		//IQueryable'da veritabanına sorgu atmaz ne zamanki ToList(); deriz o zaman db'ye sorguyu atar. Dolayısıyla listeleyip vs sonra veritabanına atabiliriz.Daha hızlı olur.
 
 		IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
 		Task<T> GetByIdAsync(int id);
